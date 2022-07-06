@@ -1,16 +1,48 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-// import App from './App'
+import Header from "./Header"
 import './index.css'
 
-const headers = (
-    <div>
-        <h1>info site</h1>
-        <h2>animals</h2>
-        <h2>locations</h2>
-        <h2>how many</h2>
-    </div>
-)
+
+function NumberedList() {
+    return(
+        <span className='container'>
+            {/* console.log(Header) */}
+            <h1>things I like about react</h1>
+            <ol>
+                <li>its composable</li>
+                <li>its declaritive</li>
+                <li>its common(easier to find courses)</li>
+            </ol>
+        </span>
+    )
+
+}
+
+function Footer() {
+    return (
+        <footer>
+            <small>© 20xx frank development. all rights reserved.</small>
+        </footer>
+    )
+}
+
+function Page() {
+    const page = (
+        <div>
+            <Header/>
+            <NumberedList/>
+            <Footer/>
+        </div>
+    )
+    // console.log(page)
+    return page
+}
 ReactDOM.createRoot(document.getElementById("root")).render(
-        headers
+    <Page/>
 )
+    
+// ReactDOM.createRoot(document.getElementById("root")).render(
+//     <Header/>
+// )
+
